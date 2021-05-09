@@ -84,6 +84,23 @@ struct node * pop(){
 
 }
 
+void sumValuesOfStack(){
+
+    if(HEAD == NULL){
+        return;
+    }
+    else{
+        int sum = 0;
+        struct node *currHead = HEAD;
+        while(currHead != NULL){
+            sum += currHead->value;
+            currHead = currHead->next;
+        }
+        printf("\nThe sum of the values of the nodes in the list is : %d\n",sum);
+    }
+
+}
+
 void printMenu(){
 
     printf("\n\n~=~=~=MENU~=~=~=\n1)Display list\n2)Push node to stack\n3)Pop node from stack\n4)Exit program");
