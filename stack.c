@@ -101,6 +101,24 @@ void sumValuesOfStack(){
 
 }
 
+void displayEven(){
+
+    int nodeCount = 0;
+    struct node *currHead = HEAD;
+    while(currHead != NULL){
+        if(currHead->value % 2 == 0){
+            printf("\nNODE %d has an even value of %d",nodeCount,currHead->value);
+            nodeCount++;
+            currHead = currHead->next;
+        }
+        else{
+            nodeCount++;
+            currHead = currHead->next;
+        }
+    }
+
+}
+
 void printMenu(){
 
     printf("\n\n~=~=~=MENU~=~=~=\n1)Display list\n2)Push node to stack\n3)Pop node from stack\n4)Exit program");
