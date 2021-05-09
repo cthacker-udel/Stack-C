@@ -101,6 +101,21 @@ void sumValuesOfStack(){
 
 }
 
+void displayOdd(){
+
+    int nodeCount = 0;
+    struct node *currHead = HEAD;
+    while(currHead != NULL){
+        int nodeVal = currHead->value;
+        if(nodeVal % 2 != 0){
+            printf("\nNode %d has an odd value of %d\n",nodeCount,nodeVal);
+        }
+        nodeCount++;
+        currHead = currHead->next;
+    }
+
+}
+
 void displayEven(){
 
     int nodeCount = 0;
